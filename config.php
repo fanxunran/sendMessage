@@ -30,4 +30,18 @@
     //  }
     $_CFG['access_token'] = "11_0GK9bR_V2UY6kXWprrpxcfdBh2Ahqy-eJxzwc35gdXrvJqXBjd3JTpJQRKwxAI7Cpue_MBxL2J7Op0HdpP1drG71FCCA61zczGxpyEQ2696M1T1S-MQbJWNum34JWEiACASFN";
 
+
+   $url = 'https://mp.weixin.qq.com/s/2nYbw8VfKKLv-o2EDm8DXg';
+    //初始化一个 cURL 对象
+    $ch  = curl_init();
+    //设置你需要抓取的URL
+    curl_setopt($ch, CURLOPT_URL, $url);
+    // 设置cURL 参数，要求结果保存到字符串中还是输出到屏幕上。
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    //是否获得跳转后的页面
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    echo $data;
+
 ?>

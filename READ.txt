@@ -1,0 +1,7 @@
+1,拿到accessToken，发送图文的url，设置一次发送的条数$_CFG['send_num']，缩略图，跟新config.php文件，然后上传
+2，php fileUpload.php，拿到缩略图地址，给fileUpload.php的配置内容thumb_media_id
+2，运行getInnerhtml.html文件拿取content微信图文内容给fileUpload.php的配置内容content
+3，用xhsell工具运行php fileUpload.php拿到图文的缩略图media_id
+4，将media_id复制到config.php,
+5，split –b 1024 big.txt small_将openid文件按大小（-l按行）拆分为多个文件
+6，通过run.sh去循环引入各个文件执行运行php testSendInfor.php openid包名
